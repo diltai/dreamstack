@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@dilta/util": [
+        "libs/util/src"
+      ],
+      "@dilta/util/*": [
+        "libs/util/src/*"
+      ],
+      "@dilta/authentication": [
+        "libs/authentication/src"
+      ],
+      "@dilta/authentication/*": [
+        "libs/authentication/src/*"
+      ],
+      "@dilta/admin": [
+        "libs/admin/src"
+      ],
+      "@dilta/admin/*": [
+        "libs/admin/src/*"
+      ],
+      "@dilta/preset": [
+        "libs/preset/src"
+      ],
+      "@dilta/preset/*": [
+        "libs/preset/src/*"
+      ],
+      "@dilta/testing": [
+        "libs/testing/src"
+      ],
+      "@dilta/testing/*": [
+        "libs/testing/src/*"
+      ],
+      "@dilta/academics": [
+        "libs/academics/src"
+      ],
+      "@dilta/academics/*": [
+        "libs/academics/src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

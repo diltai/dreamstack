@@ -1,0 +1,74 @@
+/**
+ * record of subjects and students
+ *
+ * @export
+ * @interface Record
+ * @extends {Partial<BaseModel>}
+ */
+export interface Record extends Partial<BaseModel> {
+  subject: string;
+  teacherId: string;
+  class: SchoolClass;
+  session: string;
+  term: TermPreset;
+}
+
+/**
+ * subject records information recored stored in the database's interface
+ *
+ * @export
+ * @interface Subject
+ */
+export interface Subject extends Partial<BaseModel> {
+  firstCa: number;
+  secondCa: number;
+  exam: number;
+  total: number;
+  studentId: string;
+  teacherId: string;
+  recordId: string;
+}
+
+/**
+ * Academic setting and configuration
+ *
+ * @export
+ * @interface AcademicConfig
+ * @extends {Partial<BaseModel>}
+ */
+export interface AcademicSetting extends Partial<BaseModel> {
+  record: RecordSheetConfig;
+  grade: GradingConfig;
+}
+
+export interface GradingConfig {
+  A: GradingRange;
+  B: GradingRange;
+  C: GradingRange;
+  D: GradingRange;
+  E: GradingRange;
+  F: GradingRange;
+}
+
+export interface GradingRange {
+  min: number;
+  max: number;
+}
+
+
+/**
+ * configuration for academic records and settings
+ *
+ * @interface RecordSheetConfig
+ */
+export interface RecordSheetConfig {
+  firstCa: RecordScoreConfig;
+  secondCa?: RecordScoreConfig;
+  exam: RecordScoreConfig;
+}
+
+export interface RecordScoreConfig {
+  title: string;
+  max: number;
+}
+

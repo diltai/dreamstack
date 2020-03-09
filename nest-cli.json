@@ -1,0 +1,31 @@
+{
+  "language": "ts",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "util": {
+      "root": "libs/util",
+      "sourceRoot": "libs/util/src"
+    },
+    "authentication": {
+      "root": "libs/authentication",
+      "sourceRoot": "libs/authentication/src"
+    },
+    "admin": {
+      "root": "libs/admin",
+      "sourceRoot": "libs/admin/src"
+    },
+    "preset": {
+      "root": "libs/preset",
+      "sourceRoot": "libs/preset/src"
+    },
+    "testing": {
+      "root": "libs/testing",
+      "sourceRoot": "libs/testing/src"
+    },
+    "academics": {
+      "root": "libs/academics",
+      "sourceRoot": "libs/academics/src"
+    }
+  }
+}
